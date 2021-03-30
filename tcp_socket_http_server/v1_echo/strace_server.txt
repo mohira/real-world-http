@@ -1,0 +1,18 @@
+write(1, "Run main\n", 9)               = 9
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+setsockopt(3, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(3, {sa_family=AF_INET, sin_port=htons(8888), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+listen(3, 128)                          = 0
+getsockname(3, {sa_family=AF_INET, sin_port=htons(8888), sin_addr=inet_addr("127.0.0.1")}, [112->16]) = 0
+write(1, "Server is running at 127.0.0.1:8"..., 36) = 36
+accept4(3, 0xc00003fbe8, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Resource temporarily unavailable)
+accept4(3, {sa_family=AF_INET, sin_port=htons(35756), sin_addr=inet_addr("127.0.0.1")}, [112->16], SOCK_CLOEXEC|SOCK_NONBLOCK) = 7
+getsockname(7, {sa_family=AF_INET, sin_port=htons(8888), sin_addr=inet_addr("127.0.0.1")}, [112->16]) = 0
+setsockopt(7, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+setsockopt(7, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+setsockopt(7, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+setsockopt(7, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+read(7, "Hello from client_tcp_echo.go", 1024) = 29
+write(1, "Hello from client_tcp_echo.go\0\0\0"..., 1025) = 1025
+write(7, "Hello from server_tcp_echo.go", 29) = 29
+close(7)                                = 0
