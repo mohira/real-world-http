@@ -8,7 +8,7 @@ import (
 
 // 『Goならわかるシステムプログラミング』第4版 p.109 6.5.2 TCP ソケットを使ったHTTPクライアント
 func main() {
-	fmt.Println("Run main")
+	fmt.Println("Run webapi")
 	conn, err := net.Dial("tcp_socket_http_server", "localhost:8888")
 	if err != nil {
 		panic(err)

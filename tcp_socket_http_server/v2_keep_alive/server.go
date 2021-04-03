@@ -14,7 +14,7 @@ import (
 
 // 『Goならわかるシステムプログラミング』第4版 p.110 6.6.1 Keep-Alive対応のHTTP サーバー
 func main() {
-	fmt.Println("Run main")
+	fmt.Println("Run webapi")
 	listener, err := net.Listen("tcp_socket_http_server", "localhost:8888")
 	if err != nil {
 		panic(err)

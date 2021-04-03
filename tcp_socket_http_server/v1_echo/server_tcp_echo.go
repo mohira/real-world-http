@@ -7,7 +7,7 @@ import (
 
 // 『Goならわかるシステムプログラミング』第4版 p.107 6.5.1 TCP ソケットを使ったHTTPサーバー
 func main() {
-	fmt.Println("Run main")
+	fmt.Println("Run webapi")
 
 	// net.Listen() は socket(2) -> bind(2) -> listen(2) まで一気にやっている
 	// なので net.Bind() や net.Socket()という命令はない

@@ -11,7 +11,7 @@ import (
 
 // 『Goならわかるシステムプログラミング』第4版 p.110 6.6.2 Keep-Alive対応のHTTPクライアント
 func main() {
-	fmt.Println("Run main")
+	fmt.Println("Run webapi")
 
 	// 3つのリクエストを送るイメージ
 	// わかりやすくするためにリクエストボディに載せる
